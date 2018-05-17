@@ -58,7 +58,7 @@ if(isset($_POST['completeSearch'])){
 		}
 
 		if(!$inventory = $stmt -> get_result()){//stmt get result
-			echo "Get Result failed: (". $stmt -> errno .")".$stmt -> error;
+			exit("Get Result failed: (". $stmt -> errno .")".$stmt -> error);
 		}
 			
 		$tableResult = '';
