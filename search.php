@@ -54,7 +54,7 @@ if(isset($_POST['completeSearch'])){
 		}
 
 		if(!$stmt->execute()){// stmt execute
-			echo "Execute failed: (". $stmt -> errno .")" . $stmt -> error;
+			exit("Execute failed: (". $stmt -> errno .")" . $stmt -> error);
 		}
 
 		if(!$inventory = $stmt -> get_result()){//stmt get result
